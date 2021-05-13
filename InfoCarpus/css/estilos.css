@@ -1,0 +1,134 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #f3f3f3;
+	color: #000;
+	font-family: sans-serif;
+}
+.contenedor{
+	width: 90%;
+	max-width: 1024px;
+	margin: 20px auto;
+
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns:  repeat(2, 1fr);
+	grid-template-rows:  repeat(6, auto);
+
+	grid-template-areas: "header header"
+					      "nav nav"
+					      "galeria galeria"
+					      "planta1 planta1"
+					      "animal1 animal2"
+					      "footer footer";
+}
+.contenedor > section, 
+.contenedor .cabecera,
+.contenedor .menuPrincipal, 
+.contenedor .galeria, 
+.contenedor .planta1,  
+.contenedor .animal1,  
+.contenedor .animal2,  
+.contenedor .footer{
+	background: #fff;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+.contenedor .cabecera {
+	background: #12203E;
+	color: #fff;
+	grid-area: header;
+}
+.contenedor .menuPrincipal {
+	background: #12203E;
+	color: #fff;
+	grid-area: nav;
+}
+
+.contenedor .galeria{
+	grid-area: galeria;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #333;
+	color: #fff;
+}
+
+.contenedor .planta1{
+	background: #333;
+	grid-area: planta1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+}
+
+.contenedor .animal1, 
+.contenedor .animal2{
+	background: #55a8fd;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.contenedor .animal1{
+	grid-area: animal1;
+}
+
+.contenedor .animal2{
+	grid-area: animal2;
+}
+
+.contenedor .footer{
+	background: #12203E;
+	color: #fff;
+	grid-area: footer;
+}
+
+.contenedor .menuPrincipal a{
+    text-decoration:none;
+    color:inherit;
+    font-size:15px;
+    } 
+    .contenedor .menuPrincipal li{
+    display:inline-block;
+    width:14%;
+    padding:5px 10px;
+    background-color:#000;
+    border:1px solid #000;
+    text-align:center;
+    color:#fff;
+    }
+    .contenedor .menuPrincipal li:hover{
+    background-color:#fff;
+    color:#000;
+    }
+
+
+@media screen and (max-width: 768px){
+	.contenedor{
+		grid-template-areas: "header header"
+					      "nav nav"
+					      "galeria galeria"
+					      "planta1 planta1"
+					      "animal1 animal2"
+					      "footer footer";
+	}
+}
+
+@media screen and (max-width: 568px){
+	body{
+		background: red;
+	}
+	.contenedor{
+		grid-template-areas: "header header"
+					      "nav nav"
+					      "galeria galeria"
+					      "planta1 planta1"
+					      "animal1 animal1"
+					      "footer footer";
+	}
+}
